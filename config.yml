@@ -1,0 +1,46 @@
+resources:
+- name: sampleProject
+  type: solutions.api
+  properties:
+    inputs:
+    - name: org
+      prompt: Edge Org name
+    - name: username
+      prompt: Username
+    - name: password
+      prompt: Password
+      hidden: true
+    - name: env
+      prompt: Edge Org Environment
+    configurations:
+    - env: test
+      edge_host: https://api.enterprise.apigee.com
+    - env : prod
+      edge_host: https://api.enterprise.apigee.com
+    basePath: .
+    subResources:
+    - name: message_kvm
+      type: kvm
+      items:
+      - name: kvm
+        payload: '{ "name" : "hello_world", "entry" : [ { "name" : "welcome_msg", "value" : "holla !! welcome to the real world !" } ] }'
+    - name: public_API_proxies
+      type: proxy
+      items:
+      - name: Apigee-Mock-API
+      - name: Apigee-Mock-Hello
+    - name: helloworld_products
+      type: product
+      items:
+      - name: mock-api-product
+        payload: '{"approvalType":"auto", "displayName":"Mock API Product 1.0","name":"mock-api-product","environments":["test","prod"],"scopes":[], "proxies":["Apigee-Mock-API"]}'
+    - name: developers
+      type: developer
+      items:
+      - payload: '{"email":"hollaworld@apigee.net", "firstName":"holla","lastName":"world","userName":"holaworld"}'
+        email: hollaworld@apigee.net
+    - name: developer_apps
+      type: app
+      items:
+      - name: mock_app_123
+        payload: '{"name":"holla_world","callback":"","email":"hollaworld@apigee.net","apiProducts":"mock-api-product"}'

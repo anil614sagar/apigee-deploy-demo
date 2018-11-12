@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="3" name="Apigee-Mock-API">
+    <Basepaths>/mock/v10</Basepaths>
+    <Basepaths>/mock/v10</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1541929913038</CreatedAt>
+    <CreatedBy>anilsr@google.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>Apigee-Mock-API</DisplayName>
+    <LastModifiedAt>1541929913038</LastModifiedAt>
+    <LastModifiedBy>anilsr@google.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:e0b5593c7388c1c3d82a3f6ad08bdb1b79416c9c7ea3470710e46f90e93532734c7ef0da9ba91213cc77bcd1ed883b373a5cc2936dae360004b064ca8168a433</ManifestVersion>
+    <Policies>
+        <Policy>JavaScript-1</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://JavaScript-1.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
