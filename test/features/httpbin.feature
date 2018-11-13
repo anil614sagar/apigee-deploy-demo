@@ -5,4 +5,4 @@ Feature:
 	Scenario: Setting headers in GET request
 		Given I set User-Agent header to apickli
 		When I GET /mock/v10
-		Then response body path $.headers.User-Agent should be apicklis
+		Then response body path $.headers.User-Agent should be apickli
